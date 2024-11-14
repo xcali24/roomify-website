@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>roomify - Bestellung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #232c3a;
+            color: #333;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #202025 ;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        h1 {
+            color: #e0dfdf  ;
+            text-align: center;
+        }
+
+        h2 {
+            color: #e0dfdf  ;
+            
+        }
+        
+        p {
+            color: #e0dfdf  ;
+        }
+
+        label{
+            color: #e0dfdf  ;
+        }
+
+
+        li {
+            color: #e0dfdf  ; 
+        }
+
+        .order-info, .order-form {
+            margin-bottom: 20px;
+        }
+
+        .order-info p {
+            font-size: 1.1em;
+        }
+
+        .order-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .order-form input[type="text"],
+        .order-form input[type="email"],
+        .order-form input[type="tel"],
+        .order-form select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #4a4a8c;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .cta-button:hover {
+            background-color: #373a5e;
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    
+      <h1>Bestellung für roomify<h1/>
+      
+      <a href="Home.html" class="cta-button">Zurück</a>
+    
+  </header>
+
+<div class="container">
+    <section class="order-info">
+        <h2>Bestellübersicht</h2>
+        <p>Vielen Dank für Ihr Interesse an roomify! Bitte füllen Sie das Formular unten aus, um Ihre Bestellung abzuschließen.</p>
+        <ul>
+            <li><strong>Lieferzeit:</strong> 3-5 Werktage</li>
+            <li><strong>Zahlungsmethoden:</strong> Kreditkarte, PayPal, Rechnung</li>
+            <li><strong>Versandkosten:</strong> Kostenlos für Bestellungen über 100 €</li>
+            <li><strong>roomify Beginner  | </strong>20€</li>
+            <li><strong>roomify Premium  | </strong>35€</li>
+            <li><strong>roomify Pro| </strong>45€</li>
+            <li><strong>roomify Unlimited | </strong>65€</li>
+
+
+
+        </ul>
+    </section>
+
+    <section class="order-form">
+        <h2>Bestellformular</h2>
+        <form action="/bestellung-abschliessen" method="post">
+            <label for="name">Vollständiger Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-Mail-Adresse:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="product">Produkt auswählen:</label>
+            <select id="product" name="product" required>
+                <option value="Beginner">roomify Beginner</option>
+                <option value="Premium">roomify Premium</option>
+                <option value="pro">roomify Pro</option>
+                <option value="unlimited">roomify Unlimited</option>
+            </select>
+
+            <label for="quantity">Anzahl:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+            <label for="address">Lieferadresse:</label>
+            <input type="text" id="address" name="address" required>
+
+            <button type="submit" class="cta-button">Bestellung abschicken</button>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
